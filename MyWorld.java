@@ -29,24 +29,16 @@ public class MyWorld extends World
         
         enemySpawnTime.mark();
         
-        // spawn enemy after 100 millis seconds.
-        // enemy();
-        
+        // spawn enemy after 100 millis seconds.    
         spawnEnemy();
-    }
-    
-    public void enemy()
-    {
-        if(enemySpawnTime.millisElapsed() > 1)
-        {
-            spawnEnemy();
-            enemySpawnTime.mark();
-        }
     }
     
     public void spawnEnemy()
     {
-        int y = Greenfoot.getRandomNumber(getWidth() - 50) + 25;
-        addObject(new Enemy(), 600, y);
+        Enemy enemy = new Enemy();
+        int x = 600;
+        int y = Greenfoot.getRandomNumber(600);
+        addObject(enemy, x, y);
     }
+    
 }

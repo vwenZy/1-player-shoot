@@ -27,6 +27,8 @@ public class Enemy extends Actor
         {
             removeTouching(Enemy.class);
             getWorld().removeObject(this);
+            MyWorld world = (MyWorld) getWorld();
+            world.spawnEnemy();
         }
     }
     
