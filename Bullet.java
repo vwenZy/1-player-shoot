@@ -18,11 +18,13 @@ public class Bullet extends Actor
         // Add your action code here.
         setLocation(getX() + 5, getY());
         
-        MyWorld world = (MyWorld) getWorld();
-        if(isAtEdge())
+        eat();
+        
+        if(getX() > 598)
         {
-            world.removeObject(this);
+            getWorld().removeObject(this);
         }
+        
     }
     
     public Bullet()
@@ -32,4 +34,13 @@ public class Bullet extends Actor
         setImage(img);
     }
     
+    public void eat()
+    {
+        if(isTouching(Enemy.class)) {
+            removeTouching(Enemy.class);
+            MyWorld world = (MyWorld) getWorld();
+            world.spawnEnemy();
+            world.increaseScore();
+        }
+    }
 }

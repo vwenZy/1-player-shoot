@@ -23,13 +23,6 @@ public class Enemy extends Actor
             Greenfoot.setWorld(gameOverWorld);
         }
         
-        if(isTouching(Bullet.class))
-        {
-            removeTouching(Enemy.class);
-            getWorld().removeObject(this);
-            MyWorld world = (MyWorld) getWorld();
-            world.spawnEnemy();
-        }
     }
     
     public Enemy()
