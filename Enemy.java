@@ -19,8 +19,9 @@ public class Enemy extends Actor
         
         if(getX() <= 70)
         {
-            GameOver gameOverWorld = new GameOver();
-            Greenfoot.setWorld(gameOverWorld);
+            MyWorld world = (MyWorld) getWorld();
+            world.decreaseLife();
+            world.removeObject(this);
         }
         
     }
