@@ -9,7 +9,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class MyWorld extends World
 {
     public static SimpleTimer shootTime = new SimpleTimer();
-    public int score = 0;
+    public static int score = 0;
     Label scoreLabel;
     Label lifeLabel;
     public static int life = 3;
@@ -55,7 +55,7 @@ public class MyWorld extends World
     
     public void decreaseLife()
     {
-        if(life <= 0)
+        if(life <= 1)
         {
             GameOver gameOverWorld = new GameOver();
             Greenfoot.setWorld(gameOverWorld);
@@ -69,5 +69,10 @@ public class MyWorld extends World
     public void setLife(int x)
     {
         life = x;
+    }
+    
+    public static int getScore()
+    {
+        return score;
     }
 }
