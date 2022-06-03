@@ -43,7 +43,7 @@ public class MyWorld extends World
     {
         Enemy enemy = new Enemy();
         int x = 600;
-        int y = Greenfoot.getRandomNumber(600);
+        int y = Greenfoot.getRandomNumber(570);
         addObject(enemy, x, y);
     }
     

@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=Bear
-comment0.text=\n\ Write\ a\ description\ of\ class\ Bear\ here.\n\ \n\ @author\ (your\ name)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
+comment0.text=\n\ Write\ a\ description\ of\ class\ Bear\ here.\n\ \n\ @author\ Zhang\n\ @version\ June\ 1\n
 comment1.params=
 comment1.target=Bear()
 comment1.text=\n\ Constructor\ -\ The\ code\ that\ gets\ run\ one\ time\ when\ object\ is\ created.\n
